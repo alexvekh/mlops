@@ -1,0 +1,27 @@
+# Dockerfile.slim
+FROM python:3.9 AS builder
+
+WORKDIR /build
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt -t /build/deps
+
+COPY model.pt .
+COPY imagenet_classes.json .
+COPY inference.py .
+
+
+# --- Final minimal image ---
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copy only required artifacts
+COPY --from=builder /build/deps /app/deps
+COPY --from=builder /build/model.pt .
+COPY --from=builder /build/imagenet_classes.json .
+COPY --from=builder /build/inference.py .
+
+ENV PYTHONPATH="/app/deps"
+
+ENTRYPOINT ["python3", "inference.py"]
