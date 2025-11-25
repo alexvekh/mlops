@@ -10,7 +10,7 @@
 - Підтримка **ImageNet classes** для інтерпретації результатів.
 - **Docker multi-stage build**:
   - **ml-fatetest**: повна середа для розробки та тестів (20+ GB)
-  - **ml-slimtest**: мінімальна slim версія для production (11+ GB)
+  - **ml-slimtest**: мінімальна slim версія для production (8+ GB)
 - Можливість запуску inference на будь-якому зображенні без необхідності попереднього копіювання в контейнер.
 - CPU-only inference, готовий до використання у production.
 

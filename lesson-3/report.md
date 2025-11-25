@@ -2,7 +2,7 @@
 
 ## 1. Розмір образів
 - ml-fatetest: 20.54 GB
-- ml-slimtest: 11.14 GB
+- ml-slimtest:  8.4 GB
 
 ## 2. Кількість шарів
 - ml-fatetest: 20
@@ -22,9 +22,9 @@
 ## 4. Оптимізація
 
 ### - Вже застосовано для оптимізації ml-slimtest
-  - Slim-базовий образ (використовується python:3.9-slim).
+  - Slim-базовий образ (використовується python:3.10-slim).
   - Кешування пакетів pip (--no-cache-dir в pip install).
-  - PyTorch cpu-only (у requirements.txt torch без +cu*).
+  - PyTorch cpu-only (у requirements.txt torch без +cu*, з extra-index-url для CPU).
 
 ### - Пропозиції з подальшої оптимізації
 1. **Видаляти тимчасові файли і документацію після інсталяцій**  
