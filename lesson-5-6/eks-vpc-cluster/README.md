@@ -87,7 +87,7 @@ Before you start, install:
 - eks-pod-identity-agent
 - Two node groups:
   - node_group1 = t3.micro, min = 1, max = 2, desired = 1
-  - node_group2 = t3.ЫЬФДД, min = 2, max = 3, desired = 2
+  - node_group2 = t3.small, min = 2, max = 3, desired = 2
 
 ### 🔗 Outputs
 
