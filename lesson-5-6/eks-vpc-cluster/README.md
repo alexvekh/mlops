@@ -90,9 +90,6 @@ Before you start, install:
   - node_group1 = t3.micro, min = 1, max = 2, desired = 1
   - node_group2 = t3.small, min = 2, max = 3, desired = 2
 
-
-![alt text](image.png)
-
 ### 🔗 Outputs
 
 After apply, you will see:
@@ -138,6 +135,8 @@ Example:
         kubectl get nodes --show-labels
         aws eks list-clusters --region us-east-1
         aws eks describe-cluster --name my-cluster --region us-east-1
+
+![node-groups.jpg](node-groups.jpg)
 
 
 ## 🧹 How to Destroy Infrastructure
