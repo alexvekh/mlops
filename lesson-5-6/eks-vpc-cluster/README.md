@@ -54,6 +54,7 @@ Before you start, install:
 
         terraform init
 
+
 3. Validate configuration
 
         terraform validate
@@ -87,7 +88,7 @@ Before you start, install:
 - eks-pod-identity-agent
 - Two node groups:
   - node_group1 = t3.micro, min = 1, max = 2, desired = 1
-  - node_group2 = t3.ЫЬФДД, min = 2, max = 3, desired = 2
+  - node_group2 = t3.small, min = 2, max = 3, desired = 2
 
 ### 🔗 Outputs
 
@@ -134,6 +135,8 @@ Example:
         kubectl get nodes --show-labels
         aws eks list-clusters --region us-east-1
         aws eks describe-cluster --name my-cluster --region us-east-1
+
+![node-groups.jpg](node-groups.jpg)
 
 
 ## 🧹 How to Destroy Infrastructure
