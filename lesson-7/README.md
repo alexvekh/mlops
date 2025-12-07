@@ -179,8 +179,16 @@ Password: <отриманий вище пароль>
 ## 📁 Посилання на Git-репозиторій
 
 Проєкт налаштовано на деплой із Git-репозиторію.
-
 👉 https://github.com/alexvekh/goit-argo.git
+
+        goit-argo
+        ├── namespaces
+        │  ├── application
+        │  │  ├── nginx.yaml
+        │  │  └── ns.yaml
+        │  └── infra-tools
+        │    └── ns.yaml
+        └── README.md
 
 ## Можливі проблеми с шляхи вирішення.
 При повторному встановленні інфраструктури:
