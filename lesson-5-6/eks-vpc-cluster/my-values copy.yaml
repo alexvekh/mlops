@@ -1,0 +1,28 @@
+service:
+  type: ClusterIP
+  port: 5000
+
+defaultArtifactRoot: file:///mlruns
+
+auth:
+  enabled: false
+
+postgresql:
+  enabled: true
+  primary:
+    persistence:
+      enabled: false
+  auth:
+    postgresPassword: mlflowpass
+    username: mlflow
+    password: mlflowpass
+    database: mlflowdb
+
+minio:
+  enabled: true
+  persistence:
+    enabled: false
+
+tracking:
+  persistence:
+    enabled: false

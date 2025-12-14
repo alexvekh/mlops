@@ -1,0 +1,32 @@
+service:
+  type: ClusterIP
+  port: 5000
+
+# Залишаємо локальне сховище артефактів у контейнері (неперсистентне)
+defaultArtifactRoot: file:///mlruns
+
+auth:
+  enabled: false
+
+# Вбудована БД PostgreSQL (без диску)
+postgresql:
+  enabled: true
+  primary:
+    persistence:
+      enabled: false
+  auth:
+    postgresPassword: mlflowpass
+    username: mlflow
+    password: mlflowpass
+    database: mlflowdb
+
+# Вбудоване S3-сховище (MinIO) 
+minio:
+  enabled: true
+  persistence:
+    enabled: false
+
+# MLflow Tracking Server (логи/артефакти не зберігатимуться між рестартами)
+tracking:
+  persistence:
+    enabled: false

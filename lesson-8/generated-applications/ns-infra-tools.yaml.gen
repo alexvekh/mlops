@@ -1,0 +1,115 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: "2025-12-07T02:45:42Z"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 43
+  name: ns-infra-tools
+  namespace: infra-tools
+  ownerReferences:
+  - apiVersion: argoproj.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ApplicationSet
+    name: namespaces-appset
+    uid: c7c3933d-e50c-4d2d-88ee-cf5e734ce60c
+  resourceVersion: "14336"
+  uid: ea051e49-21c3-4dda-84ac-a0717d1cfc84
+spec:
+  destination:
+    namespace: infra-tools
+    server: https://kubernetes.default.svc
+  project: default
+  revisionHistoryLimit: 2
+  source:
+    directory:
+      jsonnet: {}
+      recurse: true
+    path: namespaces/infra-tools
+    repoURL: https://github.com/alexvekh/goit-argo.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+status:
+  controllerNamespace: infra-tools
+  health:
+    status: Healthy
+  history:
+  - deployStartedAt: "2025-12-07T02:45:43Z"
+    deployedAt: "2025-12-07T02:45:44Z"
+    id: 0
+    initiatedBy:
+      automated: true
+    revision: ae5a73bf67bf77eb7156fe1d261a53b1beccd91f
+    source:
+      directory:
+        jsonnet: {}
+        recurse: true
+      path: namespaces/infra-tools
+      repoURL: https://github.com/alexvekh/goit-argo.git
+      targetRevision: main
+  operationState:
+    finishedAt: "2025-12-07T02:45:44Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revision: ae5a73bf67bf77eb7156fe1d261a53b1beccd91f
+        syncOptions:
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: "2025-12-07T02:45:43Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Namespace
+        message: 'namespace/infra-tools configured. Warning: resource namespaces/infra-tools
+          is missing the kubectl.kubernetes.io/last-applied-configuration annotation
+          which is required by  apply.  apply should only be used on resources created
+          declaratively by either  create --save-config or  apply. The missing annotation
+          will be patched automatically.'
+        name: infra-tools
+        namespace: infra-tools
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: ae5a73bf67bf77eb7156fe1d261a53b1beccd91f
+      source:
+        directory:
+          jsonnet: {}
+          recurse: true
+        path: namespaces/infra-tools
+        repoURL: https://github.com/alexvekh/goit-argo.git
+        targetRevision: main
+  reconciledAt: "2025-12-07T03:03:20Z"
+  resources:
+  - kind: Namespace
+    name: infra-tools
+    status: Synced
+    version: v1
+  sourceType: Directory
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: infra-tools
+        server: https://kubernetes.default.svc
+      source:
+        directory:
+          jsonnet: {}
+          recurse: true
+        path: namespaces/infra-tools
+        repoURL: https://github.com/alexvekh/goit-argo.git
+        targetRevision: main
+    revision: ae5a73bf67bf77eb7156fe1d261a53b1beccd91f
+    status: Synced
