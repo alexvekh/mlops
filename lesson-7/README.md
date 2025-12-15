@@ -208,4 +208,12 @@ Password: <отриманий вище пароль>
 
         terraform state rm kubernetes_manifest.namespaces_appset
         terraform init
+
         terraform apply
+
+Або може буди корисними вдалит весь бакет перед створенням нового
+
+        aws s3 rb s3://mlops-tfstate-hw --force
+
+        terraform apply
+
