@@ -1,0 +1,16 @@
+# Dockerfile.fat
+FROM python:3.9
+
+# System deps
+RUN apt-get update && apt-get install -y python3-pip git wget
+
+# Python libs
+RUN pip install torch torchvision pillow
+
+WORKDIR /app
+
+COPY model.pt .
+COPY imagenet_classes.json .
+COPY inference.py .
+
+ENTRYPOINT ["python3", "inference.py"]
