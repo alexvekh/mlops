@@ -26,4 +26,5 @@ lesson-9/mlflow-experiments/.env
 lesson-9/mlflow-experiments/mlruns/*
 lesson-10/terraform/.terraform/*
 lesson-9/mlflow-experiments/mlflow.db
-lesson-7/argocd/.terraform/
+lesson-7/argocd/.terraform/.terraform/
+**/.terraform/
