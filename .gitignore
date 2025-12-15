@@ -12,6 +12,18 @@ lesson-5-6/eks-vpc-cluster/.terraform/providers/registry.terraform.io/hashicorp/
 lesson-5-6/eks-vpc-cluster/.terraform/providers/registry.terraform.io/hashicorp/null/3.2.4/windows_amd64/terraform-provider-null_v3.2.4_x5.exe
 lesson-5-6/eks-vpc-cluster/.terraform/modules/eks.eks_cluster.kms
 lesson-5-6/eks-vpc-cluster/.terraform.lock.hcl
-
-## PS C:\DIR\GOIT\mlops> git ls-files -s | Sort-Object { ($_ -split '\s+')[4] } -Descending | Select-Object -First 30
-## git rm --cached lesson-5-6/eks-vpc-cluster/.terraform/*
+lesson-7/s3/.terraform/*
+lesson-8/s3/.terraform/*
+lesson-9/s3/.terraform/*
+lesson-7/eks-vpc-cluster/.terraform/*
+lesson-8/eks-vpc-cluster/.terraform/*
+lesson-9/eks-vpc-cluster/.terraform/*
+lesson-7/argocd/.terraform/*
+lesson-8/argocd/.terraform/*
+lesson-9/argocd/.terraform/*
+lesson-9/venv/*
+lesson-9/mlflow-experiments/.env
+lesson-9/mlflow-experiments/mlruns/*
+lesson-10/terraform/.terraform/*
+lesson-9/mlflow-experiments/mlflow.db
+lesson-7/argocd/.terraform/
