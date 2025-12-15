@@ -1,0 +1,46 @@
+service:
+  type: ClusterIP
+  port: 5000
+
+defaultArtifactRoot: file:///mlruns
+
+auth:
+  enabled: false
+
+postgresql:
+  enabled: true
+  image:
+    registry: docker.io
+    repository: bitnami/postgresql
+    tag: 16.3.0-debian-12-r0
+  primary:
+    persistence:
+      enabled: false
+  auth:
+    postgresPassword: mlflowpass
+    username: mlflow
+    password: mlflowpass
+    database: mlflowdb
+
+minio:
+  enabled: true
+  image:
+    registry: docker.io
+    repository: bitnami/minio
+    tag: 2024.11.18-debian-12-r1
+  persistence:
+    enabled: false
+
+tracking:
+  image:
+    registry: docker.io
+    repository: bitnami/mlflow
+    tag: 3.3.2-debian-12-r2
+  persistence:
+    enabled: false
+
+run:
+  image:
+    registry: docker.io
+    repository: bitnami/os-shell
+    tag: 12-debian-12-r49

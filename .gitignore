@@ -3,6 +3,11 @@
 *.tfstate
 *.tfstate.backup
 .terraform.lock.hcl
+*.terraform/
+lesson-3\venv
+lesson-3/README.md
+lesson-4/my-first-project/.terraform/
+lesson-4/my-first-project/eks/.terraform/
 lesson-5-6/eks-vpc-cluster/.terraform/providers/registry.terraform.io/hashicorp/tls/4.1.0/windows_amd64/LICENSE.txt
 lesson-5-6/eks-vpc-cluster/.terraform/providers/registry.terraform.io/hashicorp/time/0.13.1/windows_amd64/terraform-provider-time_v0.13.1_x5.exe
 lesson-5-6/eks-vpc-cluster/.terraform/providers/registry.terraform.io/hashicorp/tls/4.1.0/windows_amd64/terraform-provider-tls_v4.1.0_x5.exe
@@ -27,3 +32,11 @@ lesson-9/mlflow-experiments/mlruns/*
 lesson-10/terraform/.terraform/*
 lesson-9/mlflow-experiments/mlflow.db
 lesson-7/argocd/.terraform/
+=======
+lesson-7//s3/.terraform/*
+lesson-7//eks-vpc-cluster/.terraform/*
+lesson-7//argocd/.terraform/*
+lesson-8//s3/.terraform/*
+lesson-8//eks-vpc-cluster/.terraform/*
+lesson-8//argocd/.terraform/*
+
