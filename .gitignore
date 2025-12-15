@@ -28,3 +28,5 @@ lesson-10/terraform/.terraform/*
 lesson-9/mlflow-experiments/mlflow.db
 lesson-7/argocd/.terraform/.terraform/
 **/.terraform/
+**/venv/*
+lesson-3/venv/*
